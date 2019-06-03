@@ -183,7 +183,9 @@ public class GravityMutator implements MoveMutator, EnvironmentMutator {
 
     @Override
     public void update() {
-        calculateMasses();
+        if (params.gravityEnabled) {
+            calculateMasses();
+        }
     }
 
     @Override
